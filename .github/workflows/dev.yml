@@ -1,4 +1,4 @@
-name: wf1
+name: DEV_wf1
 on: 
   push:
     branches: 
