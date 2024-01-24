@@ -1,0 +1,49 @@
+name: wf1
+on: 
+  push:
+    branches: 
+      - main
+  pull_request:
+    branches:
+      - main
+  ##schedule:
+   ##- cron: "*/5 * * * *"
+  workflow_dispatch:
+  
+jobs:
+  job1: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: step1 for testing
+        run: |
+          echo hello world
+          sleep 10
+      - name: step2
+        run: |
+          echo "hello from step2"
+          touch file1
+          ls -l 
+          sleep 10
+          pwd
+          uname -a
+      - run: | 
+          echo hello from step3
+          sleep 10
+  job2: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: step1 for testing
+        run: |
+          echo hello world from step1 of job2
+          sleep 10
+      - name: step2
+        run: |
+          echo "hello from step2 of job2"
+          touch file1
+          ls -l 
+          sleep 10
+          pwd
+          uname -a
+      - run: | 
+          echo hello from step3 of job2 
+          sleep 10      
