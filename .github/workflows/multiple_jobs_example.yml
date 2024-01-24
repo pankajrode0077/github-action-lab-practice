@@ -1,4 +1,4 @@
-name: wf1
+name: multiple_jobs_example_Workflow
 on: 
   push:
     branches: 
