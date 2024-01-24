@@ -3,7 +3,7 @@ on:
   push
 jobs:
   job1:
-    runs-on: ubantu-latest
+    runs-on: ubuntu-latest
     steps: 
        - name: step1 for testing
          run: echo hello pankajjjjjjjjj
