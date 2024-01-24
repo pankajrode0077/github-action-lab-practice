@@ -1,0 +1,22 @@
+name: wf1
+on: 
+  push:
+    branches: 
+      - dev
+  pull_request:
+    branches:
+      - dev  
+jobs:
+  job1: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: step1 for testing
+        run: echo hello world
+      - name: step2
+        run: |
+          echo "hello from step2"
+          touch file1
+          ls -l 
+          pwd
+          uname -a
+      - run: echo hello from step3 
